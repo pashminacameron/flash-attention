@@ -279,7 +279,6 @@ setup(
         "einops",
     ],
     setup_requires=[
-        "packaging",
         "psutil",
         "ninja",
     ],
