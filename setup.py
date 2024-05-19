@@ -189,9 +189,10 @@ if not SKIP_CUDA_BUILD:
                 ),
             },
             include_dirs=[
-                Path(this_dir) / "csrc" / "flash_attn",
-                Path(this_dir) / "csrc" / "flash_attn" / "src",
-                Path(this_dir) / "csrc" / "cutlass" / "include",
+                this_dir,
+                os.path.join(this_dir, "csrc/flash_attn"),
+                os.path.join(this_dir, "csrc/flash_attn/src"),
+                os.path.join(this_dir, "csrc/cutlass/include")
             ],
         )
     )
